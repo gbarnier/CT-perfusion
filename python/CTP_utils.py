@@ -41,11 +41,13 @@ def get_cuda_info(msg=None):
 	print("Reserved memory on GPU: %3.2f [GB]" % (torch.cuda.memory_reserved(device=config.device)/1024**3))
 	print("Max allocated memory on GPU: %3.2f [GB]" % (torch.cuda.max_memory_allocated(device=config.device)/1024**3))
 	print("Max reserved memory on GPU: %3.2f [GB]" % (torch.cuda.max_memory_reserved(device=config.device)/1024**3))
+	print("-"*21+"-"*len("GPU info"))
+	############################ Other information #############################
 	# print("Memory statistics: ", torch.cuda.memory_stats())
 	# print("torch.cuda.list_gpu_processes(device=config.device): ",torch.cuda.list_gpu_processes(device=config.device))
 	# print("torch.cuda.memory_summary(device=config.device, abbreviated=False)):", torch.cuda.memory_summary(device=config.device, abbreviated=False))
 	# print("torch.cuda.memory_snapshot(): ", torch.cuda.memory_snapshot())
-	print("-"*21+"-"*len("GPU info"))
+	############################################################################
 
 # Plot and save objective functions for loss and accuracy
 def save_results(loss_train, loss_dev, accuracy_train, accuracy_dev, lr_curve, exp_folder, exp_name, show=False, save=True):
@@ -541,6 +543,7 @@ def get_mean_std(loader):
 	std_data = (std_data / n_batch - mean_data**2)**0.5
 	return mean_data, std_data
 
+# Set the same random numbers
 def seed_everything(seed=42):
     os.environ['PYTHONHASHSEED'] = str(seed)
     random.seed(seed)

@@ -73,48 +73,9 @@ def create_model(model_type, input_size, info=True):
 
 	return model
 
-
-# Baseline model: 1 FC hidden layer followed by ReLU
-class debug(nn.Module):
-
-	def __init__(self, input_size):
-
-		# Call to the __init__ function of the super class
-		super(debug, self).__init__()
-
-		# Model name
-		self.name = 'debug'
-
-		# Conv layer
-		nc0 = 1 # Number of input channels
-		n0 = input_size
-		nf_conv1 = 30
-		f_conv1 = 10
-		s_conv1 = 1
-		p_conv1 = 0
-		conv1 = nn.Conv1d(nc0, nf_conv1, f_conv1, stride=s_conv1, padding=p_conv1)
-		n1 = int( (n0+2*p_conv1-f_conv1)/s_conv1 ) + 1
-		print("input conv 1: ", n0)
-		print("output conv 1: ", n1)
-
-		# FC layer
-		n_fc1_in = n1*nf_conv1
-		n_fc1_out = 1
-		print("input fc 1: ", n_fc1_in)
-		print("output fc 1: ", n_fc1_out)
-		fc1 = nn.Linear(n_fc1_in, n_fc1_out)
-		# Model construction
-		self.network = nn.Sequential(
-			conv1,nn.ReLU(),nn.Flatten(),fc1,nn.ReLU()
-		)
-
-	def forward(self, x):
-		output = self.network(x)
-		# print("shape output: ", output.shape)
-		output = torch.reshape(output, (output.shape[0], output.shape[1]))
-		return output
-
-# Baseline model: 1 FC hidden layer followed by ReLU
+################################################################################
+############################### Basline models #################################
+################################################################################
 class baseline(nn.Module):
 
 	def __init__(self, input_size):
@@ -220,6 +181,9 @@ class fc_deep(nn.Module):
 		output = torch.reshape(output, (output.shape[0], output.shape[1]))
 		return output
 
+################################################################################
+############################### 1D CNN models ##################################
+################################################################################
 # Model modified from:
 # https://blog.goodaudience.com/introduction-to-1d-convolutional-neural-networks-in-keras-for-time-sequences-3a7ff801a2cf
 class cnn_blog(nn.Module):
@@ -838,7 +802,6 @@ class blogDeep(nn.Module):
 		output = self.network(x)
 		return output
 
-
 class blogLarge(nn.Module):
 
 	def __init__(self, input_size):
@@ -953,102 +916,6 @@ class blogLarge(nn.Module):
 			nn.Flatten(),
 			fc1,nn.ReLU(),
 			fc2,nn.LeakyReLU(config.leaky_slope)
-		)
-
-	def forward(self, x):
-		output = self.network(x)
-		return output
-
-class blog_test(nn.Module):
-
-	def __init__(self, input_size):
-
-		# Call to the __init__ function of the super class
-		super(blog_test, self).__init__()
-
-		# Model name
-		self.name = 'blog_test'
-
-		# Conv1
-		nc0 = 1 # Number of input channels
-		n0 = input_size
-		# nf_conv1 = 100
-		nf_conv1 = 30
-		f_conv1 = 3
-		s_conv1 = 1
-		p_conv1 = 0
-		conv1 = nn.Conv1d(nc0, nf_conv1, f_conv1, stride=s_conv1, padding=p_conv1)
-		print("input conv 1: ", n0)
-
-		# Conv2
-		n1 = int( (n0+2*p_conv1-f_conv1)/s_conv1 ) + 1
-		# nf_conv2 = 100
-		nf_conv2 = 30
-		f_conv2 = 3
-		s_conv2 = 1
-		p_conv2 = 0
-		conv2 = nn.Conv1d(nf_conv1, nf_conv2, f_conv2, stride=s_conv2, padding=p_conv2)
-		print("input conv 2: ", n1)
-
-		# MaxPool1
-		n2 = int( (n1+2*p_conv2-f_conv2) / s_conv2) + 1
-		f_pool1 = 3
-		s_pool1 = f_pool1
-		p_pool1 = 0
-		max_pool1 = nn.MaxPool1d(f_pool1, stride=s_pool1, padding=p_pool1)
-		print("input max pool 1: ", n2)
-
-		# Conv3
-		n3 = int( (n2+2*p_pool1-f_pool1)/s_pool1 ) + 1
-		# nf_conv3 = 160
-		nf_conv3 = 50
-		f_conv3 = 3
-		s_conv3 = 1
-		p_conv3 = 0
-		conv3 = nn.Conv1d(nf_conv2, nf_conv3, f_conv3, stride=s_conv3, padding=p_conv3)
-		print("input conv 3 : ", n3)
-
-		# Conv4
-		n4 = int( (n3+2*p_conv3-f_conv3)/s_conv3 ) + 1
-		# nf_conv4 = 160
-		nf_conv4 = 50
-		f_conv4 = 3
-		s_conv4 = 1
-		p_conv4 = 0
-		conv4 = nn.Conv1d(nf_conv3, nf_conv4, f_conv4, stride=s_conv4, padding=p_conv4)
-		print("input conv 4 : ", n4)
-
-		# Average pooling
-		n5 = int( (n4+2*p_conv4-f_conv4) / s_conv4) + 1
-		f_pool2 = 2
-		s_pool2 = f_pool2
-		p_pool2 = 0
-		avg_pool2 = nn.AvgPool1d(f_pool2, stride=s_pool2, padding=p_pool2)
-		print("input avg pool 1 : ", n5)
-
-		# Dropout1
-		# p_drop1 = 0.5 # Probability of zeroing out activation
-		# dropout1 = nn.Dropout(p_drop1)
-
-		# FC1
-		n_fc1_in = int( (n5+2*p_pool2-f_pool2) / s_pool2) + 1
-		print("n_fc1_in before:", n_fc1_in)
-		n_fc1_in*=nf_conv4
-		n_fc1_out = 1
-		fc1 = nn.Linear(n_fc1_in, n_fc1_out)
-		print("input FC 1 : ", n_fc1_in)
-		print("output FC 1 : ", n_fc1_out)
-
-		# Model construction
-		self.network = nn.Sequential(
-			conv1,nn.ReLU(),
-			conv2,nn.ReLU(),
-			max_pool1,
-			conv3,nn.ReLU(),
-			conv4,nn.ReLU(),
-			avg_pool2,nn.ReLU(),
-			nn.Flatten(),
-			fc1,nn.LeakyReLU(config.leaky_slope)
 		)
 
 	def forward(self, x):

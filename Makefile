@@ -24,16 +24,3 @@ include make-train-subset4.m
 # Test on 8 heads
 include make-data-subset5.m
 include make-train-subset5.m
-include make-train5-base-result.m
-include make-train5-fc-result.m
-include make-train5-kir-result.m
-include make-train5-blog-result.m
-
-# Test on 15 heads
-include make-train6-inversion.m
-
-# Debugging
-include make-debug.m
-
-################################# 2D analysis ##################################
-include make-ctPerf2D-data.m
