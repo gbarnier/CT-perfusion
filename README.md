@@ -1,6 +1,10 @@
 <!-- Headings -->
-### AI for healthcare: Predicting brain tissue damage for stroke patients using deep supervised learning and CTP data
-Welcome to our repository where we summarize our project's main contribution and provide access to our code. The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder.
+### AI for healthcare: prediction of brain tissue damage for stroke patients using deep supervised learning and CTP data
+After a stroke, some brain tissues may still be salvageable but we have to move fast: find out how we propose to improve the diagnostic/treatment process.
+
+---
+### Welcome!
+Welcome to our repository where we summarize our project's main contribution and provide access to our code. The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder. Our numerical optimization code is implemented using the PyTorch open source machine learning library based on the Torch library.
 
 ---
 ### Project description
@@ -32,67 +36,8 @@ Welcome to our repository where we summarize our project's main contribution and
 
 ---
 ### Training process
-
-<!-- Italic -->
-*This text* is in italic
-_this text_ is in italic
-
-<!-- Bold -->
-**This text** is bold
-__This text__ is bold
-
----
-___
-
-\*This text\* is bold
-
-> This is a quote
-
-[link to a website](www.youtube.com)
-[link to a website with a title when you point cursor to it](www.youtube.com "youtube")
-
-<!-- List -->
-* Item 1
-* Item 2
-* Item 3
-* Item 4
-    * Nest item 1
-    * Nest item 2
-
-1. Item 1
-1. Item 2
-1. Item 3
-1. Item 4
-    * Nest item 1
-    * Nest item 2
-
-`<p>This is a paragraph</p>`
-
-![Logo](Fig/insta.png)
-
-
-<!-- Github markdown -->
-```bash
-    npm install
-    make install
-```
-
-```javascript
-    function add(num1, num2){
-        return num1+num2;
-    }
-```
-```python
-    def add(num1, num2):
-        return num1+num2
-    }
-```
-<!-- Tables -->
-| Name | Email       |
-| ---- | ----------- |
-| Toto | toto@gmail.com |
-| Mike | mike@gmail.com |
-
-* [x] Task 1
-* [x] Task 2
-* [ ] Task 3
+The code for training our neural network is decomposed in four files within the **python** folder:
+1. **CTP_main.py** and **CTP_train.py** contain the optimization workflow
+2. **CTP_models.py** contains the 8 different neural network architectures tested throughout our analysis
+3. **CTP_utils.py** implements other useful functions such as loading/saving results, GPU memory management, etc.
+4. **CTP_config.py** is where we set our default parameters for the optimization process.
