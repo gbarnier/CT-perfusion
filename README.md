@@ -1,6 +1,10 @@
 <!-- Headings -->
-# CT-perfusion project
-## CT-perfusion project
+# AI for healthcare: Predicting brain tissue damage for stroke patients using deep supervised learning and CTP data
+
+### Summary:
+* We use computed tomography perfusion (CTP) data combined with a supervised deep learning algorithm to predict voxelwise blood-flow properties within the brain for ischemic stroke patients
+* We extract features from the density/time curves of each voxel with a supervised deep learning model based on 1D convolutional layers
+* We successfully apply our method on a dataset provided by the Stanford University School of Medicine and show its potential at recovering the main hemodynamic properties of the brain tissues
 
 <!-- Italic -->
 *This text* is in italic
@@ -64,4 +68,4 @@ ___
 
 * [x] Task 1
 * [x] Task 2
-* [] Task 3
+* [ ] Task 3
