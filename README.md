@@ -1,10 +1,11 @@
 <!-- Headings -->
-### AI for healthcare: prediction of brain tissue damage for stroke patients using deep supervised learning and CTP data
+---
+### AI + Healthcare = Prediction of brain tissue damage for stroke patients using deep supervised learning and CTP data
 After a stroke, some brain tissues may still be salvageable but we have to move fast: find out how we propose to improve the diagnostic/treatment process.
 
 ---
 ### Welcome!
-Welcome to our repository where we summarize our project's main contribution and provide access to our code. The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder. Our numerical optimization code is implemented using the PyTorch open source machine learning library based on the Torch library.
+Welcome to our repository where we summarize our project's main contributions and provide access to our code. The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder. Our numerical optimization code is implemented using the PyTorch open source machine learning library based on the Torch library.
 
 ---
 ### Project description
