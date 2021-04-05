@@ -5,7 +5,7 @@ Welcome to our repository where we summarize our project's main contributions an
 
 ---
 ### Our project in a nutshell
-* After a stroke, some brain tissues may still be salvageable but we have to move fast: find out how we propose to improve the diagnostic/treatment process.
+* After a stroke, some brain tissues may still be salvageable but we have to move fast. Here, we try to improve the diagnostic/treatment process.
 * Our project is entitled: *Prediction of brain tissues hemodynamics for stroke patients using computed tomography perfusion imaging and deep learning*
 
 ---
@@ -14,10 +14,6 @@ Welcome to our repository where we summarize our project's main contributions an
 * Computer vision
 * Healthcare
 * Computed tomography perfusion imaging (CTP)
-
----
-### Welcome!
-Welcome to our repository where we summarize our project's main contributions and provide access to our code. The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder. Our numerical optimization code is implemented using the PyTorch open source machine learning library based on the Torch library.
 
 ---
 ### Project description
