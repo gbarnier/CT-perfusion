@@ -40,7 +40,7 @@ Welcome to our repository where we summarize our project's main contributions an
 * Each 3D image contains 10 axial slices of 512 x 512 pixels, representing the raw output of the scan.
 * The vertical and horizontal samplings are 10 mm and 4 mm, respectively.
 * In addition, the TMax 3D maps computed by RAPID are provided in a similar structure, but each axial slice is composed of 256 x 256 pixels, sampled at 8 mm.
-* Unfortunately, the data are not publicly available, but please contact us for more information.
+* Unfortunately, the **data are not publicly available**, but please contact us for more information.
 * The scripts for the pre-processing steps can be found in **python/CT_utils.py** and **python/CTP_convertDCM.py**
 
 ---
