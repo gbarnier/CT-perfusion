@@ -2,6 +2,7 @@
 ## Predicting brain tissue damage for stroke patients using deep supervised learning and CTP data
 
 ![workflow](/Fig/ctp_workflow_resize.png)
+<p align="center"><img width="100%" src="Fig/ctp_workflow_resize.png" /></p>
 
 ### Project description:
 * We use computed tomography perfusion (CTP) data combined with a supervised deep learning algorithm to predict voxelwise blood-flow properties within the brain for ischemic stroke patients
