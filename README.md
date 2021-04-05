@@ -2,6 +2,7 @@
 ### AI for healthcare: Predicting brain tissue damage for stroke patients using deep supervised learning and CTP data
 Welcome to our repository where we summarize our project's main contribution and provide access to our code. The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder.
 
+---
 ### Project description
 * We use computed tomography perfusion (CTP) data combined with a supervised deep learning algorithm to predict voxelwise blood-flow properties within the brain for ischemic stroke patients
 * We extract features from the density/time curves of each voxel with a supervised deep learning model based on 1D convolutional layers
@@ -18,8 +19,8 @@ Welcome to our repository where we summarize our project's main contribution and
 * Our algorithm uses 4D CTP data as input and predicts a 3D image corresponding to the value of a hemodynamic parameter referred to as TMAX at every position (voxel) of the brain. This parameter represents the delayed arrival of the contrast bolus and guides the radiologist to accurately predict and delineate the extent of the core and penumbra. Higher TMAX values may indicate the presence of damaged tissues. Our proposed workflow can be summarized by the following schematic diagram:
 
 <p align="center"><img width="50%" src="Fig/ctp_workflow_resized.png" /></p>
-___
 
+---
 ### Data and pre-processing steps
 * Our dataset was provided by the Stanford School of Medicine and contains CTP data for approximately 400 anonymous stroke patients, stored under the DICOM format.
 * For each patient, it includes 55 3D CT images of the head acquired sequentially during the perfusion process with an acquisition sampling rate ranging from 0.5 s to 3 s.
@@ -29,7 +30,8 @@ ___
 * Unfortunately, the data are not publicly available, but please contact us for more information.
 * The scripts for the pre-processing steps can be found in **python/CT_utils.py** and **python/CTP_convertDCM.py**
 
-### Training
+---
+### Training process
 
 <!-- Italic -->
 *This text* is in italic
