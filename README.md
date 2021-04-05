@@ -1,7 +1,19 @@
 <!-- Headings -->
 ---
-### AI + Healthcare = Prediction of brain tissue damage for stroke patients using deep supervised learning and CTP data
-After a stroke, some brain tissues may still be salvageable but we have to move fast: find out how we propose to improve the diagnostic/treatment process.
+### Welcome!
+Welcome to our repository where we summarize our project's main contributions and provide access to our code.
+
+---
+### Our project in a nutshell
+* After a stroke, some brain tissues may still be salvageable but we have to move fast: find out how we propose to improve the diagnostic/treatment process.
+* Our project is entitled: *Prediction of brain tissues hemodynamics for stroke patients using computed tomography perfusion imaging and deep learning*
+
+---
+### Key words for this project
+* Artificial intelligence, machine learning, deep supervised learning
+* Computer vision
+* Healthcare
+* Computed tomography perfusion imaging (CTP)
 
 ---
 ### Welcome!
@@ -37,7 +49,7 @@ Welcome to our repository where we summarize our project's main contributions an
 
 ---
 ### Training process
-The code for training our neural network is decomposed in four files within the **python** folder:
+The main code base is located within the **python** folder, and the commands to run the programs can be found in the **makefile** folder. Our numerical optimization code is implemented using the PyTorch open source machine learning library based on the Torch library:
 1. **CTP_main.py** and **CTP_train.py** contain the optimization workflow
 2. **CTP_models.py** contains the 8 different neural network architectures tested throughout our analysis
 3. **CTP_utils.py** implements other useful functions such as loading/saving results, GPU memory management, etc.
