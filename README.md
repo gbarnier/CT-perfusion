@@ -53,7 +53,7 @@ The main code base is located within the **python** folder, and the commands to 
 
 ---
 ### The team
-* <font size="4"><a href="https://www.linkedin.com/in/guillaume-barnier/">Guillaume Barnier</a></font>
-* <font size="4"><a href="https://www.linkedin.com/in/ettore-biondi/">Ettore Biondi</a></font>
-* <font size="4"><a href="https://www.linkedin.com/in/greg-forbes/">Gregory Forbes</a></font>
-* <font size="4"><a href="https://profiles.stanford.edu/elizabeth-tong">Elizabeth Tong</a> (Principal Investigator)</font>
+* <font size="4"><a href="https://www.linkedin.com/in/guillaume-barnier/" target="_blank">Guillaume Barnier</a></font>
+* <font size="4"><a href="https://www.linkedin.com/in/ettore-biondi/" target="_blank">Ettore Biondi</a></font>
+* <font size="4"><a href="https://www.linkedin.com/in/greg-forbes/" target="_blank">Gregory Forbes</a></font>
+* <font size="4"><a href="https://profiles.stanford.edu/elizabeth-tong" target="_blank">Elizabeth Tong</a> (Principal Investigator)</font>
