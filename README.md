@@ -6,7 +6,7 @@ Welcome to our repository where we summarize our project's main contributions an
 ---
 ### Our project in a nutshell
 * After a stroke, some brain tissues may still be salvageable but we have to move fast. Here, we try to improve the diagnostic/treatment process.
-* Our project is entitled: **Prediction of brain tissues hemodynamics for stroke patients using computed tomography perfusion imaging and deep learning**
+* Our project is entitled: "**Prediction of brain tissues hemodynamics for stroke patients using computed tomography perfusion imaging and deep learning**"
 
 ---
 ### Key words for this project
